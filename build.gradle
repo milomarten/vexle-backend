@@ -25,6 +25,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.apache.commons:commons-collections4:4.4'
 
 	compileOnly 'org.projectlombok:lombok'
@@ -47,6 +48,6 @@ tasks.register('createFrontend', Copy) {
 	into layout.projectDirectory.dir('src/main/resources/static')
 }
 
-processResources.dependsOn('createFrontend')
+//processResources.dependsOn('createFrontend')
 
 clean.dependsOn(':vexle-frontend:cleanFrontend')
